@@ -1,0 +1,94 @@
+@keyframes aparecer {
+    0%{
+        background-color: greenyellow;
+        color: green;
+    }
+
+    100%{
+        background-color: rgb(0, 0, 255);
+        color: white;
+    }
+}
+
+@keyframes sumir {
+
+    0%{
+        background-color: rgb(0, 0, 255);
+        color: white;
+    }
+
+    100%{
+        background-color: greenyellow;
+        color: green;
+    }
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 212, 212);
+}
+
+section{
+    border: 1px solid black;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    box-shadow: -5px 10px 0px black;
+}
+
+div{
+    background-color: greenyellow;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: -3px 4px 0px black;
+    font-weight: 700;
+    color: green;
+    cursor: pointer;
+    animation: sumir .5s;
+}
+
+.marcado{
+    animation: aparecer .5s;
+    background-color: blue;
+    color: white;
+}
+
+article{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    box-shadow: -3px 3px 0px black;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: color .5s, transform .5s, box-shadow .5s;
+}
+
+button:hover{
+    color: yellow;
+    transform: translate(5px, -5px);
+    box-shadow: -8px 8px 0px black;
+}
